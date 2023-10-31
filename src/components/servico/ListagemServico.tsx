@@ -1,8 +1,9 @@
 import React, { Component, useState, ChangeEvent, FormEvent, useEffect } from 'react';
 
-import styles from "../App.module.css";
-import { CadastroServicoInterface } from '../interfaces/CadastroServicoInterface';
+import styles from "../../App.module.css";
+
 import axios from 'axios';
+import { CadastroServicoInterface } from '../../interfaces/CadastroServicoInterface';
 
 
 const ListagemServico = () => {
@@ -12,7 +13,7 @@ const ListagemServico = () => {
     const [error, setError] = useState("");
 
     const handleState = (e: ChangeEvent<HTMLInputElement>) => {
-        if(e.target.name === "pesquisa"){
+        if (e.target.name === "pesquisa") {
             setPesquisa(e.target.value);
         }
     }
@@ -24,18 +25,22 @@ const ListagemServico = () => {
             try {
 
                 const response = await axios.post('http://localhost:8000/api/servico/nome',
-                    {nome: pesquisa},
+                    { nome: pesquisa },
                     {
                         headers: {
                             "Accept": "application/json",
                             "Content-Tye": "application/json"
                         }
                     }).then(function (response) {
+                        if (response.data.status === true){
                         setServicos(response.data.data);
+                        }else{
+                            setServicos([]);
+                        }
                     }).catch(function (error) {
                         console.log(error);
                     });
-            } catch(error){
+            } catch (error) {
                 console.log(error);
             }
         }
@@ -45,11 +50,11 @@ const ListagemServico = () => {
 
     useEffect(() => {
         async function fetchData() {
-            try{
+            try {
                 const response = await axios.get('http://localhost:8000/api/servico/retornarTodos/');
                 setServicos(response.data.data);
 
-            }catch(error){
+            } catch (error) {
                 setError("Ocorreu um erro");
                 console.log(error);
             }
@@ -62,14 +67,17 @@ const ListagemServico = () => {
         <div>
             <main className={styles.main}>
                 <div className='container'>
-                    
+
                     <div className='col-md mb-3'>
                         <div className='card'>
                             <div className='card-body'>
                                 <h5 className='card-title'>Pesquisar</h5>
                                 <form onSubmit={buscar} className='row'>
                                     <div className='col-10'>
-                                        <input type="text" name='pesquisa' className='form-control' onChange={handState} />
+                                        <input type="text" name='pesquisa' className='form-control' onChange={handleState} />
+                                    </div>
+                                    <div className='col-1'>
+                                        <button type='submit' className='btn btn-success'>Pesquisar</button>
                                     </div>
                                 </form>
                             </div>

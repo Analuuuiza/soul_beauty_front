@@ -1,9 +1,8 @@
 import React, { Component, useState, ChangeEvent, FormEvent, useEffect } from 'react';
 import Header from '../Header';
 import Footer from "../FooterServico";
-import styles from '../App.module.css';
+import styles from '../../App.module.css';
 import axios from 'axios';
-import { error } from 'console';
 
 const CadastroServico = () => {
 
@@ -30,7 +29,8 @@ const CadastroServico = () => {
                 "Content-Type": "application/json"
             }
         }).then(function(response){
-            window.location.href = "/listagemServico";
+            console.log(response.data)
+          window.location.href = "/listagemServico";
         }).catch(function(error){
             console.log(error);
         });
