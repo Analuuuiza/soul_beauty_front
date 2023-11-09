@@ -1,8 +1,9 @@
 import React, { Component, useState, ChangeEvent, FormEvent, useEffect } from 'react';
-import Header from '../Header';
+
 import styles from "../../App.module.css";
 import axios from 'axios';
 import FooterCliente from './FooterCliente';
+import HeaderCliente from './HeaderCliente';
 
 const CadastroCliente = () => {
 
@@ -116,7 +117,7 @@ const CadastroCliente = () => {
 
 return(
     <div>
-        <Header />
+        <HeaderCliente />
         <main className={styles.main}>
             <div className='container'>
                 <div className='card'>

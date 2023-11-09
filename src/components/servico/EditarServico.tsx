@@ -1,7 +1,7 @@
 import React, { Component, useState, ChangeEvent, FormEvent, useEffect } from "react";
 import FooterServico from "./FooterServico";
-import Header from "../Header";
-import styles from "../App.module.css"
+import Header from "./HeaderServico";
+import styles from "../../App.module.css"
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
@@ -27,7 +27,7 @@ const EditarServico = () => {
             preco: preco
         }
 
-        axios.put("http://127.0.0.1:8000/servico/api/update",
+        axios.put("http://127.0.0.1:8000/api/servico/update",
         dados,
         {
             headers: {
@@ -44,7 +44,7 @@ const EditarServico = () => {
     useEffect(() => {
         async function fetchData() {
             try{
-                const response = await axios.get("http://127.0.0.1:8000/servico/api/find/" + parametro.id);
+                const response = await axios.get("http://127.0.0.1:8000/api/servico/find/" + parametro.id);
                 setNome(response.data.data.nome);
                 setDescricao(response.data.data.descricao);
                 setDuracao(response.data.data.duracao);

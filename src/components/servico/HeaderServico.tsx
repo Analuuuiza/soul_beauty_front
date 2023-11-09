@@ -1,8 +1,8 @@
 import React from "react";
 
-import styles from "./Header.module.css"
+import styles from "../Header.module.css"
 
-const Header = () => {
+const HeaderServico = () => {
     return (
         <header className={styles.header}>
             <h1>Buscador de Serviços</h1>
@@ -10,4 +10,4 @@ const Header = () => {
     );
 }
 
-export default Header;
+export default HeaderServico;

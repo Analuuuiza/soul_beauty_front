@@ -4,6 +4,7 @@ import styles from "../../App.module.css";
 
 import axios from 'axios';
 import { CadastroClienteInterface } from '../../interfaces/CadastroClienteInterface';
+import { Link } from 'react-router-dom';
 
 
 const ListagemCliente = () => {
@@ -122,7 +123,7 @@ const ListagemCliente = () => {
                                             <td>{clientes.cep}</td>
                                             {/* <td>{clientes.complemento}</td> */}
                                             <td>
-                                                <a href="#" className='btn btn-primary btn-sm'>Editar</a>
+                                                <Link to={"/cliente/editar/"} className='btn btn-primary btn-sm'>Editar</Link>
                                                 <a href="#" className='btn btn-danger btn-sm'>Excluir</a>
                                             </td>
                                         </tr>

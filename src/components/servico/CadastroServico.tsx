@@ -1,5 +1,5 @@
 import React, { Component, useState, ChangeEvent, FormEvent, useEffect } from 'react';
-import Header from '../Header';
+import Header from './HeaderServico';
 import FooterServico from "./FooterServico";
 import styles from '../../App.module.css';
 import axios from 'axios';
