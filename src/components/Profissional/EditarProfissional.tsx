@@ -177,9 +177,9 @@ const EditarProfissional = () => {
 
                                 </div>
                                 <div className='col-6'>
-                                    <label htmlFor="email" className='form-label'>Celular</label>
+                                    <label htmlFor="celular" className='form-label'>Celular</label>
                                     <input type="text"
-                                        name='email'
+                                        name='celular'
                                         className='form-control'
                                         required
                                         onChange={handleState}
@@ -188,9 +188,9 @@ const EditarProfissional = () => {
 
                                 </div>
                                 <div className='col-6'>
-                                    <label htmlFor="cpf" className='form-label'>E-mail</label>
+                                    <label htmlFor="email" className='form-label'>E-mail</label>
                                     <input type="text"
-                                        name='cpf'
+                                        name='email'
                                         className='form-control'
                                         required
                                         onChange={handleState}
@@ -210,9 +210,9 @@ const EditarProfissional = () => {
                                 </div>
 
                                 <div className='col-6'>
-                                    <label htmlFor="cpf" className='form-label'>Data de Nascimento</label>
+                                    <label htmlFor="dataNascimento" className='form-label'>Data de Nascimento</label>
                                     <input type="text"
-                                        name='cpf'
+                                        name='dataNascimento'
                                         className='form-control'
                                         required
                                         onChange={handleState}
@@ -221,9 +221,9 @@ const EditarProfissional = () => {
                                 </div>
 
                                 <div className='col-6'>
-                                    <label htmlFor="cpf" className='form-label'>Cidade</label>
+                                    <label htmlFor="cidade" className='form-label'>Cidade</label>
                                     <input type="text"
-                                        name='cpf'
+                                        name='cidade'
                                         className='form-control'
                                         required
                                         onChange={handleState}
@@ -232,9 +232,9 @@ const EditarProfissional = () => {
                                 </div>
 
                                 <div className='col-6'>
-                                    <label htmlFor="cpf" className='form-label'>Estado</label>
+                                    <label htmlFor="estado" className='form-label'>Estado</label>
                                     <input type="text"
-                                        name='cpf'
+                                        name='estado'
                                         className='form-control'
                                         required
                                         onChange={handleState}
@@ -243,9 +243,9 @@ const EditarProfissional = () => {
                                 </div>
 
                                 <div className='col-6'>
-                                    <label htmlFor="cpf" className='form-label'>País</label>
+                                    <label htmlFor="pais" className='form-label'>País</label>
                                     <input type="text"
-                                        name='cpf'
+                                        name='pais'
                                         className='form-control'
                                         required
                                         onChange={handleState}
@@ -254,9 +254,9 @@ const EditarProfissional = () => {
                                 </div>
 
                                 <div className='col-6'>
-                                    <label htmlFor="cpf" className='form-label'>Rua</label>
+                                    <label htmlFor="rua" className='form-label'>Rua</label>
                                     <input type="text"
-                                        name='cpf'
+                                        name='rua'
                                         className='form-control'
                                         required
                                         onChange={handleState}
@@ -265,9 +265,9 @@ const EditarProfissional = () => {
                                 </div>
 
                                 <div className='col-6'>
-                                    <label htmlFor="cpf" className='form-label'>Número</label>
+                                    <label htmlFor="numero" className='form-label'>Número</label>
                                     <input type="text"
-                                        name='cpf'
+                                        name='numero'
                                         className='form-control'
                                         required
                                         onChange={handleState}
@@ -276,9 +276,9 @@ const EditarProfissional = () => {
                                 </div>
 
                                 <div className='col-6'>
-                                    <label htmlFor="cpf" className='form-label'>Bairro</label>
+                                    <label htmlFor="bairro" className='form-label'>Bairro</label>
                                     <input type="text"
-                                        name='cpf'
+                                        name='bairro'
                                         className='form-control'
                                         required
                                         onChange={handleState}
@@ -287,9 +287,9 @@ const EditarProfissional = () => {
                                 </div>
 
                                 <div className='col-6'>
-                                    <label htmlFor="cpf" className='form-label'>CEP</label>
+                                    <label htmlFor="cep" className='form-label'>CEP</label>
                                     <input type="text"
-                                        name='cpf'
+                                        name='cep'
                                         className='form-control'
                                         required
                                         onChange={handleState}
@@ -298,9 +298,9 @@ const EditarProfissional = () => {
                                 </div>
 
                                 <div className='col-6'>
-                                    <label htmlFor="cpf" className='form-label'>Complemento</label>
+                                    <label htmlFor="complemento" className='form-label'>Complemento</label>
                                     <input type="text"
-                                        name='cpf'
+                                        name='complemento'
                                         className='form-control'
                                         required
                                         onChange={handleState}
@@ -309,9 +309,9 @@ const EditarProfissional = () => {
                                 </div>
 
                                 <div className='col-6'>
-                                    <label htmlFor="cpf" className='form-label'>Senha</label>
+                                    <label htmlFor="password" className='form-label'>Senha</label>
                                     <input type="text"
-                                        name='cpf'
+                                        name='password'
                                         className='form-control'
                                         required
                                         onChange={handleState}
@@ -320,9 +320,9 @@ const EditarProfissional = () => {
                                 </div>
 
                                 <div className='col-6'>
-                                    <label htmlFor="cpf" className='form-label'>Salário</label>
+                                    <label htmlFor="salario" className='form-label'>Salário</label>
                                     <input type="text"
-                                        name='cpf'
+                                        name='salario'
                                         className='form-control'
                                         required
                                         onChange={handleState}

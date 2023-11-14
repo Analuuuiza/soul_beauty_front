@@ -63,7 +63,7 @@ const EditarServico = () => {
         if(e.target.name === "nome"){
             setNome(e.target.value);
         }
-        if(e.target.name === "descracao"){
+        if(e.target.name === "descricao"){
             setDescricao(e.target.value);
         }
         if(e.target.name === "duracao"){
@@ -96,9 +96,9 @@ const EditarServico = () => {
 
                                 </div>
                                 <div className='col-6'>
-                                    <label htmlFor="email" className='form-label'>Descrição</label>
+                                    <label htmlFor="descricao" className='form-label'>Descrição</label>
                                     <input type="text"
-                                        name='email'
+                                        name='descricao'
                                         className='form-control'
                                         required
                                         onChange={handleState}
@@ -107,13 +107,24 @@ const EditarServico = () => {
 
                                 </div>
                                 <div className='col-6'>
-                                    <label htmlFor="cpf" className='form-label'>Duração</label>
+                                    <label htmlFor="duracao" className='form-label'>Duração</label>
                                     <input type="text"
-                                        name='cpf'
+                                        name='duracao'
                                         className='form-control'
                                         required
                                         onChange={handleState}
                                         value={duracao}
+                                    />
+                                </div>
+
+                                <div className='col-6'>
+                                    <label htmlFor="preco" className='form-label'>Preço</label>
+                                    <input type="text"
+                                        name='preco'
+                                        className='form-control'
+                                        required
+                                        onChange={handleState}
+                                        value={preco}
                                     />
                                 </div>
             

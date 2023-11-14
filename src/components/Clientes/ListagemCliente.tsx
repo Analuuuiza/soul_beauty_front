@@ -123,7 +123,7 @@ const ListagemCliente = () => {
                                             <td>{clientes.cep}</td>
                                             {/* <td>{clientes.complemento}</td> */}
                                             <td>
-                                                <Link to={"/cliente/editar/"} className='btn btn-primary btn-sm'>Editar</Link>
+                                                <Link to={"/cliente/editar/" + clientes.id} className='btn btn-primary btn-sm'>Editar</Link>
                                                 <a href="#" className='btn btn-danger btn-sm'>Excluir</a>
                                             </td>
                                         </tr>

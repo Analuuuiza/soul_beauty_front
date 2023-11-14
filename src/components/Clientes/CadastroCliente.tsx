@@ -21,6 +21,28 @@ const CadastroCliente = () => {
     const [cep, setCep] = useState<string>("");
     const [complemento, setComplemento] = useState<string>("");
     const [password, setPassword] = useState<string>("");
+    const [erro, setErro] = useState<string>("");
+
+
+    const findCep = (e: FormEvent) => {
+        e.preventDefault();
+
+        fetch('https://viacep.com.br/ws/'+cep+'/json',
+        {
+            method: 'GET'
+        }).then(Response => Response.json())
+        .then(
+            data => {
+                setCidade(data.localidade);
+                setCep(data.cep);
+                setEstado(data.uf);
+                setErro("");
+            }
+        ).catch(error => {
+            setErro("Pesquisa Inválida");
+        });
+
+    }
 
     const CadastroCliente = (e: FormEvent) => {
         e.preventDefault();
@@ -256,7 +278,7 @@ return(
                         </div>
 
                 <div className='col-3'>
-                        <label htmlFor="password" className='form-label'>Password</label>
+                        <label htmlFor="password" className='form-label'>Senha</label>
                         <input type="text" 
                         name="password"
                         className="form-control"
