@@ -4,9 +4,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CadastroServico from "../components/Servico/CadastroServico";
 import ListagemServico from "../components/Servico/ListagemServico";
 import EditarServico from "../components/Servico/EditarServico";
+
 import CadastroProfissional from "../components/Profissional/CadastroProfissional";
 import ListagemProfissional from "../components/Profissional/ListagemProfissional";
 import EditarProfissional from "../components/Profissional/EditarProfissional";
+
 import CadastroCliente from "../components/Clientes/CadastroCliente";
 import ListagemCliente from "../components/Clientes/ListagemCliente";
 import EditarCliente from "../components/Clientes/EditarCliente";
