@@ -21,6 +21,27 @@ const CadastroProfissional = () => {
     const [complemento, setComplemento] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const [salario, setSalario] = useState<string>("");
+    const [erro, setErro] = useState<string>("");
+
+    const findCep = (e: FormEvent) => {
+        e.preventDefault();
+
+        fetch('https://viacep.com.br/ws/'+cep+'/json',
+        {
+            method: 'GET'
+        }).then(Response => Response.json())
+        .then(
+            data => {
+                setCidade(data.localidade);
+                setCep(data.cep);
+                setEstado(data.uf);
+                setErro("");
+            }
+        ).catch(error => {
+            setErro("Pesquisa Inválida");
+        });
+
+    }
 
     const CadastroProfissional = (e: FormEvent) => {
         e.preventDefault();
@@ -186,6 +207,7 @@ return(
                         name="cidade"
                         className="form-control"
                         required
+                        value={cidade}
                         onChange={handleState}
                         />
                         </div>
@@ -196,6 +218,7 @@ return(
                         name="estado"
                         className="form-control"
                         required
+                        value={estado}
                         onChange={handleState}
                         />
                         </div>
@@ -244,6 +267,7 @@ return(
                         <label htmlFor="cep" className='form-label'>CEP</label>
                         <input type="text" 
                         name="cep"
+                        onBlur={findCep}
                         className="form-control"
                         required
                         onChange={handleState}

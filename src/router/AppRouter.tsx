@@ -9,9 +9,9 @@ import CadastroProfissional from "../components/Profissional/CadastroProfissiona
 import ListagemProfissional from "../components/Profissional/ListagemProfissional";
 import EditarProfissional from "../components/Profissional/EditarProfissional";
 
-import CadastroCliente from "../components/Clientes/CadastroCliente";
-import ListagemCliente from "../components/Clientes/ListagemCliente";
-import EditarCliente from "../components/Clientes/EditarCliente";
+import CadastroCliente from "../components/Cliente/CadastroCliente";
+import ListagemCliente from "../components/Cliente/ListagemCliente";
+import EditarCliente from "../components/Cliente/EditarCliente";
 
 const AppRouter = () => {
     return (
