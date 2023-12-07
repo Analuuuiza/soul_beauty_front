@@ -111,6 +111,32 @@ const ListagemProfissional = () => {
 
     return (
         <div>
+        <nav className=" bg-info">
+            <ul className="nav nav-tabs">
+
+            <li className="nav-item dropdown btn-info">
+                    <a className="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Cadastros</a>
+                    <ul className="dropdown-menu">
+                        <li><Link to={"/CadastroServico"} className="dropdown-item" >Cadastro Serviço</Link></li>
+                        <li><Link to={"/cadastroProfissional"} className="dropdown-item">Cadastro Profissional</Link></li>
+                        <li><Link to={"/CadastroCliente"} className="dropdown-item">Cadastro Cliente</Link></li>
+                       
+                    </ul>
+                </li>
+
+                <li className="nav-item dropdown btn-info">
+                    <a className="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Listagens</a>
+                    <ul className="dropdown-menu">
+                        <li><Link to={"/ListagemServico"} className="dropdown-item" >Listagem Serviço</Link></li>
+                        <li><Link to={"/ListagemProfissional"} className="dropdown-item">Listagem Profissional</Link></li>
+                        <li><Link to={"/ListagemAgenda"} className="dropdown-item">Listagem Agenda</Link></li>
+                       
+                    </ul>
+                </li>
+             
+
+            </ul>
+        </nav>
             <main className={styles.main}>
                 <div className='container'>
 
@@ -174,6 +200,7 @@ const ListagemProfissional = () => {
                                             <td>
                                                 <Link to={"/profissional/editar/" + profissionals.id} className='btn btn-primary btn-sm'>Editar</Link>
                                                 <a onClick={()=> handleDelete(profissionals.id)} className='btn btn-danger btn-sm'>Excluir</a>                                           </td>
+                                                <Link to={"/recuperarSenhaProfissional"} className='btn btn-warning btn-sm'>Recuperar Senha</Link>
                                         </tr>
                                     ))}
                                 </tbody>

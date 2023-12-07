@@ -1,13 +1,13 @@
 import React from "react";
 
 import styles from "../Header.module.css"
-
-const HeaderServico = () => {
-    return (
+const Header = () => {
+    return(
         <header className={styles.header}>
-            <h1>Soul Beauty</h1>
+            <h1>Recuperar Senha</h1>
         </header>
+
     );
 }
 
-export default HeaderServico;
+export default Header;

@@ -1,15 +1,14 @@
 import React from 'react'
-
 import styles from '../Footer.module.css'
 
-const FooterServico = () => {
-    return (
+const Footer = () =>{
+    return(
         <footer className={styles.footer}>
             <p>
-                <span>Soul Beauty</span> @soul-beuty
+                <span>Recuperar Senha</span> @soul-beuty
             </p>
         </footer>
     );
 }
 
-export default FooterServico;
+export default Footer;
